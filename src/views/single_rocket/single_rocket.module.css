@@ -1,0 +1,63 @@
+.firstSlideWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rocketName {
+  color: white;
+  font-size: 80px;
+  font-family: 'Poppins', sans-serif;
+
+  margin-bottom: 70px;
+}
+
+.description {
+  max-width: 650px;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wikiLink {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: white;
+
+  border-bottom: 1px solid white;
+  transition: color 250ms linear 0ms, border-color 250ms linear 0ms;
+}
+
+.wikiLink:hover {
+  color: orange;
+  border-color: orange;
+}
+
+.wikiLink:active {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .rocketName {
+    font-size: 50px;
+  }
+
+  .description {
+    max-width: 420px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .ParallaxLayerTwo {
+    background-position: center;
+  }
+}
+
+.ParallaxLayerOne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  background-size: cover;
+}
