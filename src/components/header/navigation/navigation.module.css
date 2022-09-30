@@ -1,0 +1,100 @@
+.navigation {
+  display: flex;
+  align-items: center;
+
+  margin-left: 70px;
+  padding: 20px 0 5px 0;
+
+  list-style-type: none;
+}
+
+.authDiv {
+  composes: navigation;
+  margin-left: auto;
+}
+
+.navItem:not(:last-child) {
+  margin-right: 40px;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+}
+
+.authLink {
+  composes: link;
+}
+
+.authLink:not(:first-child) {
+  margin-left: 40px;
+}
+
+.navBar {
+  composes: authDiv;
+}
+
+.burgerBtn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.userIcon {
+  width: 30px;
+  fill: white;
+  transition: all 250ms linear 200ms;
+}
+
+.userIconHidden {
+  opacity: 0;
+  transition: all 250ms linear;
+}
+
+.userIcon:hover {
+  fill: orange;
+}
+
+.logout {
+  composes: authLink;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logout:not(:first-child) {
+  margin: 0;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .link,
+  .authLink {
+    font-size: 17px;
+  }
+}
+
+.link::after {
+  content: '';
+  display: block;
+  margin-top: 2px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.link:hover::after {
+  width: 100%;
+}
