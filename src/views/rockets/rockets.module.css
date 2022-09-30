@@ -1,0 +1,10 @@
+.rocketsList {
+  padding: 120px 60px 0px 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .rocketsList {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
