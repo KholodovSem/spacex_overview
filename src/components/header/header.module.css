@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: black;
+
+  width: 99%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px 40px;
+}
+
+.tranparentHeader {
+  background-color: transparent;
+}
