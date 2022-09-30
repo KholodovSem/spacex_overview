@@ -1,0 +1,16 @@
+.loader {
+  margin: auto;
+}
+
+.loaderWrapper {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.customStyle {
+  display: block;
+  height: auto;
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
