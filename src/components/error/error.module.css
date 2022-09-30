@@ -1,0 +1,15 @@
+.errorWrapper {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorTitle {
+  color: white;
+  text-align: center;
+}
+
+.meme {
+  width: 500px;
+}
