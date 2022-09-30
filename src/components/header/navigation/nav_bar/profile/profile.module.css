@@ -1,0 +1,85 @@
+.container {
+  width: 100%;
+
+  padding: 0px 15px 0px 15px;
+}
+
+.profileBtn {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 26px;
+
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  margin-left: 10px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  color: white;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 250px;
+  height: 30px;
+
+  padding-top: 4px;
+
+  font-size: 16px;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.span {
+  display: inline-block;
+  margin-right: auto;
+
+  font-size: 18px;
+}
+
+.saveChangesBtn {
+  display: block;
+
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.link {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 250ms linear;
+}
+
+.link:hover {
+  color: orange;
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkWrapper:not(:last-child) {
+  margin-bottom: 10px;
+}
