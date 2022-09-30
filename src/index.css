@@ -1,13 +1,240 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*-------------------------------React Transition Group (Auth Page)----------------------------------------*/
+.authPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  padding-top: 120px;
+  overflow: hidden;
+
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  font-size: 40px;
+
+  color: white;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  margin-top: 10px;
+  height: 2px;
+  background: white;
+  opacity: 0;
+  transition: width 0.3s;
+  animation-name: border-title;
+  animation-duration: 3s;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes border-title {
+  0% {
+    width: 0%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.title:hover::after {
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  height: 30px;
+
+  margin-bottom: 30px;
+  padding: 20px 15px 20px 15px;
+
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+
+.input:focus {
+  outline: 2px solid rgba(255, 166, 0, 0.805);
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+}
+
+.step {
+  margin-bottom: 10px;
+}
+
+.button {
+  position: relative;
+  width: 100%;
+
+  padding: 10px;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: border-color 200ms linear;
+}
+
+.button:hover {
+  border-color: rgba(255, 166, 0, 0.805);
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+/*-------------------------------(Auth Page Animation)----------------------------------------*/
+
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-enter-active,
+.fade-exit-active {
+  transition: opacity 1000ms, transform 1000ms;
+}
+
+/*-------------------------------(Header Animation)----------------------------------------*/
+.burger {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -20px;
+
+  transform: translateX(350px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 15px;
+  padding-top: 40px;
+
+  width: 500px;
+  height: 400px;
+
+  background-color: #3b3b3fad;
+  border-radius: 0 0 0 20px;
+}
+
+.burgerBtn {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burgerCloseIcon {
+  width: 15px;
+  height: 15px;
+  fill: white;
+}
+
+.burgerBtn:hover .burgerCloseIcon {
+  fill: orange;
+}
+
+/*--------------------------------Transition-----------------------*/
+
+.burger.entering {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms linear;
+}
+.burger.entered {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms linear;
+}
+.burger.exiting {
+  opacity: 0;
+  transform: translateX(350px);
+  transition: all 500ms linear;
+}
+.burger.exited {
+  opacity: 0;
+  transform: translateX(350px);
+  transition: all 500ms linear;
+}
+
+/* #3c353159 */
