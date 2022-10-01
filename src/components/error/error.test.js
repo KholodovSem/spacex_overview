@@ -9,3 +9,5 @@ test('render error component', () => {
   expect(errorTitle).toBeInTheDocument();
   expect(errorImage).toBeInTheDocument();
 });
+
+
